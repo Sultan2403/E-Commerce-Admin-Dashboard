@@ -1,3 +1,4 @@
+// Component displayed when an error occurs while fetching products
 export default function ErrMsg() {
   return (
     <div>
