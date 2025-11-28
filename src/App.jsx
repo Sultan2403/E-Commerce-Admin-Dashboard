@@ -1,11 +1,17 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import "./App.css";
+import './App.css'
 import DisplayProducts from "./Components/Display Products/displayproducts";
+  import Nav from './component/nav'
+
 
 function App() {
-  return <DisplayProducts />;
+ 
+
+  return (
+    <>
+    <Nav/>
+    <DisplayProducts />
+    </>
+  )
 }
 
 export default App;
