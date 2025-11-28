@@ -1,8 +1,6 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
-import Nav from './component/nav'
+import DisplayProducts from "./Components/Display Products/displayproducts";
+  import Nav from './component/nav'
 
 
 function App() {
@@ -11,8 +9,9 @@ function App() {
   return (
     <>
     <Nav/>
+    <DisplayProducts />
     </>
   )
 }
 
-export default App
+export default App;
