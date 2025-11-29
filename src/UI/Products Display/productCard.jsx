@@ -1,6 +1,7 @@
 import capitalize from "../../Utilities/Typography/capitalizeFirstLetter";
 import ItemStatus from "./stockIndicator";
 import { LucideEdit2, Trash2 } from "lucide-react";
+import randomizeArr from "../../Utilities/Arrays/arrayRandomizer";
 
 export default function ProductsCard({ item }) {
   return (
@@ -14,7 +15,7 @@ export default function ProductsCard({ item }) {
         <img
           className="object-cover w-full h-52 rounded-xl"
           alt={item.title}
-          src={item.images[0] || item.images[1]}
+          src={randomizeArr(item.images)[0]}
         />
       </div>
 
