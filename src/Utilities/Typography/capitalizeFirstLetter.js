@@ -4,4 +4,4 @@ export default function capitalize(str) {
   if (!str) return "";
   // Uppercase the first character and concatenate with the rest of the string
   return str.charAt(0).toUpperCase() + str.slice(1);
-}
+} 
