@@ -1,17 +1,15 @@
-import './App.css'
-import DisplayProducts from "./Components/Display Products/displayproducts";
-  import Nav from './component/nav'
+import "./App.css";
 
+import DisplayProducts from "./UI/Products Display/displayproducts";
+import Nav from "./UI/Navigation/nav";
 
 function App() {
- 
-
   return (
-    <>
-    <Nav/>
-    <DisplayProducts />
-    </>
-  )
+    <div className="flex h-screen overflow-hidden">
+      <Nav />
+      <DisplayProducts />
+    </div>
+  );
 }
 
 export default App;
