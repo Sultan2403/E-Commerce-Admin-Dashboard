@@ -20,6 +20,7 @@ export default function useProducts() {
     async function awaitProducts() {
       try {
         const data = await getProducts();
+        !data[0] ? setError(true) : null; // Chks if data contains smth useful
         setProducts(data);
       } catch (err) {
         console.error(err);

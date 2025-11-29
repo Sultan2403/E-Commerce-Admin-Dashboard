@@ -16,6 +16,7 @@ export default async function getProducts() {
   } catch (error) {
     // Log any errors that occur during fetching or parsing
     console.error(error);
+    return [];
   }
 }
 
