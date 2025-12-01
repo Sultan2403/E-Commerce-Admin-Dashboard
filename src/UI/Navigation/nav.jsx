@@ -1,12 +1,21 @@
-import { House } from "lucide-react";
-import { Box } from "lucide-react";
-import { ShoppingCart } from "lucide-react";
-import { UserPen } from "lucide-react";
-import { Settings } from "lucide-react";
+import { useState } from "react";
+
+import { House, Box, ShoppingCart, UserPen, Settings, Menu } from "lucide-react";
+
 
 function Nav() {
+   const [open, setOpen] = useState(false);
   return (
     <>
+     {/* 🔥 Mobile Toggle Button (place this ABOVE the <aside>)
+      <button 
+        onClick={() => setOpen(!open)} 
+        className="md:hidden p-4 fixed top-4 left-4 z-50 bg-white shadow rounded"
+      >
+        <Menu size={28}/>
+      </button> */}
+   
+      {/* {side bar} */}
       <aside className=" h-screen w-[20%] bg-stone-200 font-medium flex flex-col">
         <div className="p-5">
           <h2 className="font-bold text-3xl mb-8">Admin panel</h2>
@@ -15,32 +24,32 @@ function Nav() {
         <ul className="flex flex-col w-full">
           <li>
             <button className="flex gap-x-7 w-full py-2.5 px-5 hover:bg-slate-400 transition-all duration-300">
-              <House />
+              <House size={24}/>
               <span>Dashboard</span>
             </button>
           </li>
 
           <li>
             <button className="flex gap-x-7 w-full py-2.5 px-5 hover:bg-slate-400 transition-all duration-300">
-              <Box />
+              <Box size={24} />
               <span>Products</span>
             </button>
           </li>
           <li>
             <button className="flex gap-x-7 w-full py-2.5 px-5 hover:bg-slate-400 transition-all duration-300">
-              <ShoppingCart />
+              <ShoppingCart size={24}/>
               <span>Orders</span>
             </button>
           </li>
           <li>
             <button className="flex gap-x-7 w-full py-2.5 px-5 hover:bg-slate-400 transition-all duration-300">
-              <UserPen />
+              <UserPen size={24}/>
               <span>Customers</span>
             </button>
           </li>
           <li>
             <button className="flex gap-x-7 w-full py-2.5 px-5 hover:bg-slate-400 transition-all duration-300">
-              <Settings />
+              <Settings size={24}/>
               <span>Settings</span>
             </button>
           </li>
