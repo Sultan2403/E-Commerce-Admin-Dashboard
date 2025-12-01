@@ -31,7 +31,7 @@ export default function SearchFilter({ onSearch, onCategoryChange }) {
           setCategory(e.target.value);
           onCategoryChange?.(e.target.value);
         }}
-        className="px-3 py-2 border border-gray-300 rounded-md text-sm bg-black focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-400"
+        className="px-3 py-2 border border-gray-300 rounded-md text-sm bg-white focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-400"
         
       >
         <option disabled value="" className="text-black">Categories</option>
