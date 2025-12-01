@@ -1,6 +1,6 @@
 
 import { useState } from "react";
-import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
+// import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 
 export default function SearchFilter({ onSearch, onCategoryChange }) {
   const [query, setQuery] = useState("");
@@ -11,7 +11,7 @@ export default function SearchFilter({ onSearch, onCategoryChange }) {
 
       {/* Search Box */}
       <div className="relative flex-1">
-        <MagnifyingGlassIcon className="w-5 h-5 text-gray-500 absolute left-3 top-1/2 -translate-y-1/2" />
+        {/* <MagnifyingGlassIcon className="w-5 h-5 text-gray-500 absolute left-3 top-1/2 -translate-y-1/2" /> */}
         <input
           type="text"
           placeholder="Search..."
