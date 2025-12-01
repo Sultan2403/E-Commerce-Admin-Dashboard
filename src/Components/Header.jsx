@@ -4,9 +4,7 @@ export default function Header() {
   return (
     <header className="w-full bg-white border-b border-gray-200 px-6 py-4 flex items-center justify-between">
       {/* Left: Brand */}
-      <div className="text-xl font-semibold text-gray-800">
-        Admin Panel
-      </div>
+    
 
       {/* Center: Search */}
       <div className="w-full max-w-md mx-6">
