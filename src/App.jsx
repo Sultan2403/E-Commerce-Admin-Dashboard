@@ -1,9 +1,13 @@
+import "./App.css";
 import React from "react";
 import Header from "./components/Header";
+import DisplayProducts from "./UI/Products Display/displayproducts";
+import Nav from "./UI/Navigation/nav";
 
-export default function App() {
+function App() {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="flex h-screen overflow-hidden">
+      <Nav /><div className="min-h-screen bg-gray-50">
       <Header />
 
       {/* Page Content Area */}
@@ -14,5 +18,9 @@ export default function App() {
         </h1>
       </div>
     </div>
+      <DisplayProducts />
+    </div>
   );
 }
+
+export default App;
