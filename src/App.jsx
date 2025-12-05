@@ -1,10 +1,9 @@
-
 import "./App.css";
-import Header from "./components/Header";
-import DisplayProducts from "./UI/Products Display/displayproducts";
-import Nav from "./UI/Navigation/nav";
-import SearchFilter from "./UI/Search Filter/searchFilter";
-import Button from "./UI/addButton/button";
+import Header from "./Components/UI/Header/Header";
+import DisplayProducts from "./Components/UI/Products Display/displayproducts";
+import Nav from "./Components/UI/Navigation/nav";
+import SearchFilter from "./Components/UI/Search Filter/searchFilter";
+import Button from "./Components/UI/addButton/button";
 
 function App() {
   return (
@@ -23,9 +22,9 @@ function App() {
             Dashboard Screen
           </h1>
         </div>
-        <SearchFilter/>
+        <SearchFilter />
         <DisplayProducts />
-        <Button/>
+        <Button />
       </div>
     </div>
   );
