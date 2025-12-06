@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import getProducts from "../Components/Api/api.config";
+import getProducts from "../Api/api.config";
 
 // Custom hook to fetch and manage products
 export default function useProducts() {
