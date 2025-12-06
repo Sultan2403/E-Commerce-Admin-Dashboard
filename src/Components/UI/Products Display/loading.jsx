@@ -1,7 +1,17 @@
+import Variants from "./skeleton";
+
 export default function LoadingMsg() {
   return (
-    <div className="w-[80%] mx-auto p-10 bg-slate-300 h-screen flex items-center justify-center">
-      <p className="text-center">Loading products...</p>
+    <div className="grid p-2 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 w-full h-screen bg-slate-300">
+      <Variants />
+      <Variants />
+      <Variants />
+      <Variants />
+      <Variants />
+      <Variants />
+      <Variants />
+      <Variants />
+      <Variants />
     </div>
   );
 }

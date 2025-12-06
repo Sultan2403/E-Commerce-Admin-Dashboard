@@ -3,7 +3,7 @@ import Header from "./Components/UI/Header/Header";
 import DisplayProducts from "./Components/UI/Products Display/displayproducts";
 import Nav from "./Components/UI/Navigation/nav";
 import SearchFilter from "./Components/UI/Search Filter/searchFilter";
-import Button from "./Components/UI/addButton/button";
+import Button from "./Components/UI/Header/button";
 
 function App() {
   return (
