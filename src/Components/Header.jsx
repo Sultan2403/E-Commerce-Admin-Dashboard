@@ -1,5 +1,5 @@
 import React from "react";
-
+import { UserRound  } from "lucide-react"
 export default function Header() {
   return (
     <header className="w-full bg-white border-b border-gray-200 px-6 py-4 flex items-center justify-between">
@@ -56,11 +56,7 @@ export default function Header() {
 
         {/* User profile */}
         <div className="h-9 w-9 rounded-full bg-gray-300 overflow-hidden cursor-pointer">
-          <img
-            src="https://via.placeholder.com/150"
-            alt="User"
-            className="h-full w-full object-cover"
-          />
+          <UserRound  className="size-5"/>
         </div>
       </div>
     </header>
