@@ -20,7 +20,7 @@ export default function DisplayProducts() {
 
   // Display products in a responsive grid layout
   return (
-    <main className="w-full p-10 overflow-y-auto bg-slate-100">
+    <main className="w-full p-10 overflow-y-auto bg-slate-300">
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 w-full">
         {products.map((item) => (
           <ProductsCard item={item} key={item.id} />

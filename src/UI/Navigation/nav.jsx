@@ -16,7 +16,7 @@ function Nav() {
       </button> */}
    
       {/* {side bar} */}
-      <aside className=" h-screen w-full  font-medium flex flex-col">
+      <aside className=" h-screen w-full bg-stone-200 font-medium flex flex-col">
         <div className="p-5">
           <h2 className="font-bold text-3xl mb-8">Admin panel</h2>
         </div>

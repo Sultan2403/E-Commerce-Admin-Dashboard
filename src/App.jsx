@@ -13,16 +13,15 @@ function App() {
         <Nav />
       </div>
 
-      <div className="flex flex-col min-h-screen w-[80%]">
+      <div className="flex flex-col min-h-screen bg-gray-50 w-[80%]">
         <Header />
 
         {/* Page Content Area */}
-        <div className="p-6  bg-slate-100">
+        <div className="p-6">
           {/* Placeholder for now */}
-          <h1 className="text-2xl pt-6 font-bold text-gray-800">
-            Products
+          <h1 className="text-2xl font-semibold text-gray-800">
+            Dashboard Screen
           </h1>
-            <h4>Manage your product Inventory</h4>
         </div>
         <SearchFilter/>
         <DisplayProducts />
