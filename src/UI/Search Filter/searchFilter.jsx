@@ -43,9 +43,9 @@ export default function SearchFilter({ onSearch, onCategoryChange }) {
       </div>
 
       {/* Category Select */}
-      <div className="relative">
+      <div className="relative flex">
       <div>
-        <Funnel  className="size-4 absolute left-3  top-1/2 -translate-y-1/2 h-5 w-5 text-gray-500"/>
+        <Funnel  className=" ml-3 size-4 absolute left-3  top-1/2 -translate-y-1/2 h-5 w-5 text-gray-500"/>
       </div>
       <select
         value={category}
@@ -53,7 +53,7 @@ export default function SearchFilter({ onSearch, onCategoryChange }) {
           setCategory(e.target.value);
           onCategoryChange?.(e.target.value);
         }}
-        className=" px-3 py-2 pr-4  border border-gray-300 rounded-md text-sm  focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-400"
+        className=" ml-3 px-3 py-2 pr-4  pl-10 border border-gray-300 rounded-md text-sm  focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-400"
         
       >
         

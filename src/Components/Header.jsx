@@ -37,7 +37,7 @@ export default function Header() {
         <button className="relative">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="h-6 w-6 text-gray-600"
+            className="h-6 w-6 mr-5 mt-1 text-gray-600"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -51,12 +51,12 @@ export default function Header() {
           </svg>
 
           {/* Notification dot */}
-          <span className="absolute top-0 right-0 block h-2 w-2 bg-red-500 rounded-full"></span>
+          <span className="absolute top-0 right-0  h-5 w-5 bg-red-600 rounded-full"></span>
         </button>
 
         {/* User profile */}
-        <div className="h-9 w-9 rounded-full bg-gray-300 overflow-hidden cursor-pointer">
-          <UserRound  className="size-5"/>
+        <div className=" flex justify-center h-9 w-9 rounded-full bg-gray-300 overflow-hidden cursor-pointer">
+          <UserRound  className=" pt-1  size-5"/>
         </div>
       </div>
     </header>
