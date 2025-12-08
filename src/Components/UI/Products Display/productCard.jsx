@@ -1,7 +1,7 @@
-import capitalize from "../../Utilities/Typography/capitalizeFirstLetter";
+import capitalize from "../../../Utilities/Typography/capitalizeFirstLetter";
 import ItemStatus from "./stockIndicator";
 import { LucideEdit2, Trash2 } from "lucide-react";
-import randomizeArr from "../../Utilities/Arrays/arrayRandomizer";
+import randomizeArr from "../../../Utilities/Arrays/arrayRandomizer";
 
 export default function ProductsCard({ item }) {
   return (
