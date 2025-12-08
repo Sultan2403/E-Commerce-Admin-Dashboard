@@ -1,9 +1,9 @@
 import "./App.css";
-import Header from "./Components/UI/Header/Header";
-import DisplayProducts from "./Components/UI/Products Display/displayproducts";
-import Nav from "./Components/UI/Navigation/nav";
-import SearchFilter from "./Components/UI/Search Filter/searchFilter";
-import Button from "./Components/UI/Header/button";
+import Header from "./Components/UI/Static/Header/Header";
+import DisplayProducts from "./Components/UI/Pages/Products Page/Products Display/displayproducts";
+import Nav from "./Components/UI/Static/Navigation/nav";
+import SearchFilter from "./Components/UI/Static/Search Filter/searchFilter";
+import Button from "./Components/UI/Static/Header/button";
 
 function App() {
   return (

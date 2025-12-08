@@ -1,10 +1,8 @@
 // Import necessary libraries and components
 
-import ErrMsg from "./handleError";
-import useProducts from "../../../Hooks/useProducts";
+import useProducts from "../../../../../Hooks/useProducts";
 import ProductsCard from "./productCard";
 import LoadingMsg from "./loading";
-import Variants from "./skeleton";
 
 // Main component that displays a grid of products fetched from the API
 export default function DisplayProducts() {
