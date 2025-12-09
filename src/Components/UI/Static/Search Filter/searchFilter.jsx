@@ -28,7 +28,7 @@ export default function SearchFilter({ onSearch, onCategoryChange }) {
       </div>
 
       {/* Category Select */}
-      <div className="flex justify-center items-center">
+      <div className="relative flex justify-center items-center">
         <select
           value={category}
           id="category-select"
@@ -36,7 +36,7 @@ export default function SearchFilter({ onSearch, onCategoryChange }) {
             setCategory(e.target.value);
             onCategoryChange?.(e.target.value);
           }}
-          className="px-3 py-2 border text-black border-gray-300 rounded-md text-sm bg-white focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-400"
+          className="appearance-none px-3 py-2 border text-black border-gray-300 rounded-md text-sm bg-white focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-400"
         >
           <option disabled value="">
             Categories
@@ -47,7 +47,7 @@ export default function SearchFilter({ onSearch, onCategoryChange }) {
           <option value="accessories">Accessories</option>
           <option value="cosmetics">Cosmetics</option>
         </select>
-        {/* <ChevronDown /> */}
+        <ChevronDown size={15} className="absolute right-1 top-auto" />
       </div>
     </div>
   );
