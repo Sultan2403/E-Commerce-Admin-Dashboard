@@ -12,7 +12,7 @@ export default function Header() {
           <Search
             color="gray"
             size={20}
-            className="absolute left-2.5 top-[20%]"
+            className="absolute left-2.5 top-[20%] hover:cursor-pointer"
           />
           <input
             type="text"

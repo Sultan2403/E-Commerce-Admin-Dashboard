@@ -1,9 +1,7 @@
-export default function AddProductFAB() {
+export default function Button() {
   return (
-    <button
-      className="fixed top-6 right-6 bg-blue-600 hover:bg-blue-700 text-white p-4 rounded-full shadow-lg transition"
-    >
-      <span className="text-sfont-bold">+ add new products</span>
+    <button className="font-semibold flex gap-1 items-center justify-center text-md bg-blue-600 hover:bg-blue-700 text-white p-2 px-3 rounded-2xl shadow-lg transition-all">
+      <span>+</span> <span>Add new products</span>
     </button>
   );
 }

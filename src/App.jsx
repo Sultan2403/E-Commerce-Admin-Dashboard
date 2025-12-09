@@ -19,7 +19,6 @@ function App() {
         <MiniHeader />
         <SearchFilter />
         <DisplayProducts />
-        <Button />
         <Orders />
       </div>
     </div>
