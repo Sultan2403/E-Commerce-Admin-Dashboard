@@ -4,6 +4,8 @@ import DisplayProducts from "./Components/UI/Pages/Products Page/Products Displa
 import Nav from "./Components/UI/Static/Navigation/nav";
 import SearchFilter from "./Components/UI/Static/Search Filter/searchFilter";
 import Button from "./Components/UI/Static/Header/button";
+import Orders from "./Components/UI/Pages/Orders Page/orders";
+
 
 function App() {
   return (
@@ -25,6 +27,7 @@ function App() {
         <SearchFilter />
         <DisplayProducts />
         <Button />
+        <Orders/>
       </div>
     </div>
   );
