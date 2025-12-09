@@ -16,8 +16,6 @@ function App() {
 
       <div className="flex flex-col min-h-screen bg-gray-50 w-[80%]">
         <Header />
-        <MiniHeader />
-        <SearchFilter />
         <DisplayProducts />
         <Orders />
       </div>

@@ -6,15 +6,16 @@ export default function SearchFilter({ onSearch, onCategoryChange }) {
   const [category, setCategory] = useState("");
 
   return (
-    <div className="flex items-center gap-3 w-full max-w-sm py-2 px-5">
+    <div className="flex items-center gap-2 w-full py-2">
       {/* Search Box */}
-      <div className="relative flex-1">
+      <div className="w-[50%] relative">
         <Search
           color="gray"
           size={20}
           className="absolute left-2.5 top-[25%] hover:cursor-pointer"
         />
         <input
+          id="search3"
           type="text"
           placeholder="Search..."
           value={query}
@@ -23,13 +24,14 @@ export default function SearchFilter({ onSearch, onCategoryChange }) {
             onSearch?.(e.target.value);
           }}
           className="w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-400"
-        />{" "}
+        />
       </div>
 
       {/* Category Select */}
-      <div className="flex gap-1 items-center">
+      <div className="flex justify-center items-center">
         <select
           value={category}
+          id="category-select"
           onChange={(e) => {
             setCategory(e.target.value);
             onCategoryChange?.(e.target.value);
