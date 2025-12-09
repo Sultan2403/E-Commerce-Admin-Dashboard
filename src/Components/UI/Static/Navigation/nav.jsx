@@ -32,13 +32,13 @@ function Nav() {
           <li>
             <button className="flex gap-x-7 w-full py-2.5 px-5 hover:bg-slate-400 transition-all duration-300">
               <Box size={24} />
-              <span>Products</span>
+              <a href="/displayproducts">Products</a>
             </button>
           </li>
           <li>
             <button className="flex gap-x-7 w-full py-2.5 px-5 hover:bg-slate-400 transition-all duration-300">
               <ShoppingCart size={24}/>
-              <span>Orders</span>
+              <a href="/Orders">Orders</a>
             </button>
           </li>
           <li>
