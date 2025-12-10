@@ -1,25 +1,19 @@
 import "./App.css";
-import Header from "./Components/UI/Static/Header/Header";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import DisplayProducts from "./Components/UI/Pages/Products Page/Products Display/displayproducts";
-import Nav from "./Components/UI/Static/Navigation/nav";
-import SearchFilter from "./Components/UI/Static/Search Filter/searchFilter";
-import Button from "./Components/UI/Static/Header/button";
-import MiniHeader from "./Components/UI/Static/Header/miniHeader";
 import Orders from "./Components/UI/Pages/Orders Page/orders";
+import AdminLayout from "./Components/UI/Static/Main/AdminLayout";
 
 function App() {
   return (
-    <div className="flex h-screen overflow-hidden">
-      <div className="w-[20%]">
-        <Nav />
-      </div>
-
-      <div className="flex flex-col min-h-screen bg-gray-50 w-[80%]">
-        <Header />
-        <DisplayProducts />
-        <Orders />
-      </div>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<AdminLayout />}>
+          <Route path="products" index element={<DisplayProducts />}></Route>
+          <Route path="orders" element={<Orders />}></Route>
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 

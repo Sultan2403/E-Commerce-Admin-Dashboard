@@ -12,7 +12,7 @@ function Orders() {
 
   if (!products_loading && !users_loading) {
     return (
-      <div className="overflow-auto flex flex-col gap-3 p-2 w-full h-full">
+      <div className="overflow-auto flex flex-col bg-gray-50 gap-3 p-2 w-full h-full">
         {products.map((product, index) => (
           <OrdersCard
             key={product.id}
