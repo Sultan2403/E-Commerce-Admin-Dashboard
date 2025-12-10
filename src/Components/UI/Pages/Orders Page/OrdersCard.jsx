@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Eye, Phone, MapPin } from "lucide-react";
 
 export default function OrdersCard({ product, customer }) {
-  const num = 2;
+  const num = product.stock / 2;
   const total = (num * product.price).toFixed(2);
   const [status, setStatus] = useState("Pending"); // default is Pending
 

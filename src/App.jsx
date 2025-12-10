@@ -17,7 +17,7 @@ function App() {
       <div className="flex flex-col min-h-screen bg-gray-50 w-[80%]">
         <Header />
         <DisplayProducts />
-        <Orders orders={[]} customers={null} />
+        <Orders />
       </div>
     </div>
   );
