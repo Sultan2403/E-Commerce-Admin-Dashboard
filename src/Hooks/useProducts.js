@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import getProducts from "../Api/api.config";
+import getProducts from "../Apis/products";
 
 // Custom hook to fetch and manage products
 export default function useProducts() {
@@ -9,11 +9,11 @@ export default function useProducts() {
 
   // State to track if an error occurred
 
-  const [error, setError] = useState(false);
+  const [products_error, setError] = useState(false);
 
   // State to track loading status
 
-  const [loading, setLoading] = useState(true);
+  const [products_loading, setLoading] = useState(true);
   async function awaitProducts() {
     setLoading(true);
     setError(false);
@@ -34,5 +34,5 @@ export default function useProducts() {
   }, []);
 
   // Return state values for the component to use
-  return { products, error, loading, awaitProducts };
+  return { products, products_error, products_loading, awaitProducts };
 }

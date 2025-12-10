@@ -9,13 +9,14 @@ export default function DisplayProducts() {
   // State to store the list of products
 
   // Use the custom hook to fetch products
-  const { products, error, loading, awaitProducts } = useProducts();
+  const { products, products_error, products_loading, awaitProducts } =
+    useProducts();
 
   // Show loading state
-  if (loading) return <LoadingMsg />;
+  if (products_loading) return <LoadingMsg />;
 
   // Show error state
-  if (error)
+  if (products_error)
     return (
       <div className="w-full mx-auto p-10 flex-col gap-2 bg-slate-300 h-screen flex items-center justify-center">
         <p className="text-center text-red-600">Failed to load products.</p>
