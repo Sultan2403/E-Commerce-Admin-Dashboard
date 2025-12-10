@@ -29,7 +29,12 @@ function Nav() {
         </div>
 
         <ul className="flex flex-col w-full">
-          <NavLink to={null}>
+          <NavLink
+            to={""}
+            className={({ isActive }) =>
+              isActive ? "text-blue-700 bg-slate-400" : null
+            }
+          >
             <li>
               <button className="flex gap-x-7 w-full py-2.5 px-5 hover:bg-slate-400 transition-all duration-300">
                 <House size={24} />
@@ -38,7 +43,12 @@ function Nav() {
             </li>
           </NavLink>
 
-          <NavLink to="/products">
+          <NavLink
+            to="/products"
+            className={({ isActive }) =>
+              isActive ? "text-blue-700 bg-slate-400" : null
+            }
+          >
             <li>
               <button className="flex gap-x-7 w-full py-2.5 px-5 hover:bg-slate-400 transition-all duration-300">
                 <Box size={24} />
@@ -47,7 +57,12 @@ function Nav() {
             </li>
           </NavLink>
 
-          <NavLink to={"/orders"}>
+          <NavLink
+            to="/orders"
+            className={({ isActive }) =>
+              isActive ? "text-blue-700 bg-slate-400" : null
+            }
+          >
             <li>
               <button className="flex gap-x-7 w-full py-2.5 px-5 hover:bg-slate-400 transition-all duration-300">
                 <ShoppingCart size={24} />
@@ -56,7 +71,12 @@ function Nav() {
             </li>
           </NavLink>
 
-          <NavLink>
+          <NavLink
+            className={({ isActive }) =>
+              isActive ? "text-blue-700 bg-blue-300" : null
+            }
+            to={"customers"}
+          >
             <li>
               <button className="flex gap-x-7 w-full py-2.5 px-5 hover:bg-slate-400 transition-all duration-300">
                 <UserPen size={24} />
@@ -65,7 +85,12 @@ function Nav() {
             </li>
           </NavLink>
 
-          <NavLink>
+          <NavLink
+            className={({ isActive }) =>
+              isActive ? "text-blue-700 bg-slate-300" : null
+            }
+            to={"settings"}
+          >
             <li>
               <button className="flex gap-x-7 w-full py-2.5 px-5 hover:bg-slate-400 transition-all duration-300">
                 <Settings size={24} />

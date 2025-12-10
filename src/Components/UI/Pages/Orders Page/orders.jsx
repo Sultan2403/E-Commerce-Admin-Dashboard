@@ -7,7 +7,12 @@ function Orders() {
   const { products, products_error, products_loading, awaitProducts } =
     useProducts();
 
-  if (products_loading || users_loading) null;
+  if (products_loading || users_loading)
+    return (
+      <p className="m-auto h-full flex items-center justify-center">
+        Loading...
+      </p>
+    );
   if (products_error || users_error) null;
 
   if (!products_loading && !users_loading) {
