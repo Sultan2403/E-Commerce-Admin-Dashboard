@@ -9,11 +9,16 @@ function Orders() {
 
   if (products_loading || users_loading)
     return (
-      <p className="m-auto h-full flex items-center justify-center">
+      <p className="m-auto self-center h-full flex items-center justify-center">
         Loading...
       </p>
     );
-  if (products_error || users_error) null;
+  if (products_error || users_error)
+    return (
+      <p className="m-auto self-center h-full flex items-center justify-center text-red-500">
+        An error occoured
+      </p>
+    );
 
   if (!products_loading && !users_loading) {
     return (
