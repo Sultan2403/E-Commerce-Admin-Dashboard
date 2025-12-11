@@ -11,7 +11,7 @@ export default async function getUsers() {
     const data = await res.json();
     console.log(data);
 
-    // Return only the products array from the response
+    // Return only the users array from the response
     return data.users;
   } catch (error) {
     // Log any errors that occur during fetching or parsing
