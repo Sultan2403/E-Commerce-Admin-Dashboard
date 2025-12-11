@@ -10,7 +10,6 @@ export default async function getProducts() {
     // Parse the JSON response body
     const data = await res.json();
     console.log(data);
-
     // Return only the products array from the response
     return data.products;
   } catch (error) {
