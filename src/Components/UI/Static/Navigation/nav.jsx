@@ -1,9 +1,12 @@
 import { useState } from "react";
 
+
 import { House, Box, ShoppingCart, UserPen, Settings, Menu } from "lucide-react";
+import Orders from "../../Pages/Orders Page/orders";
 
 
-function Nav() {
+
+ function Nav() {
    const [open, setOpen] = useState(false);
   return (
     <>
@@ -32,7 +35,7 @@ function Nav() {
           <li>
             <button className="flex gap-x-7 w-full py-2.5 px-5 hover:bg-slate-400 transition-all duration-300">
               <Box size={24} />
-              <a href="/displayproducts">Products</a>
+              <span>Products</span>
             </button>
           </li>
           <li>

@@ -7,9 +7,12 @@ import Button from "./Components/UI/Static/Header/button";
 import Orders from "./Components/UI/Pages/Orders Page/orders";
 
 
+
 function App() {
   return (
+    
     <div className="flex h-screen overflow-hidden">
+     
       <div className="w-[20%]">
         <Nav />
       </div>
@@ -27,7 +30,7 @@ function App() {
         <SearchFilter />
         <DisplayProducts />
         <Button />
-        <Orders/>
+        <Orders products={[]}/>
       </div>
     </div>
   );
