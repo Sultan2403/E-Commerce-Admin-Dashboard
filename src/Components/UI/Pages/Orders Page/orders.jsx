@@ -1,125 +1,38 @@
-import Header from "../../Static/Header/Header";
-import Nav from "../../Static/Navigation/nav";
-import SearchFilter from "../../Static/Search Filter/searchFilter";
+import OrdersCard from "./OrdersCard";
+import useUsers from "../../../../Hooks/useUsers";
+import useProducts from "../../../../Hooks/useProducts";
 
-import { Eye} from "lucide-react";
+function Orders() {
+  const { users, users_error, users_loading, awaitUsers } = useUsers();
+  const { products, products_error, products_loading, awaitProducts } =
+    useProducts();
 
-function Orders(products, customers) {
+  if (products_loading || users_loading)
+    return (
+      <p className="m-auto self-center h-full flex items-center justify-center">
+        Loading...
+      </p>
+    );
+  if (products_error || users_error)
+    return (
+      <p className="m-auto self-center h-full flex items-center justify-center text-red-500">
+        An error occoured
+      </p>
+    );
 
-    products.map(() => {
-               {/* second container */}
-            <div className="border-4 rounded-lg  m-6">
-            <div className="grid grid-flow-col gap-10 m-5">
-            <div className="">
-                <h3>ORD-001</h3>
-                <p>January 15, 2024</p>
-            </div>
-
-            <div className="flex flex-row gap-8 justify-end">
-                <span className="bg-amber-200 border-2 rounded-lg w-20 h-8">Pending</span>
-                <div className="flex flex-row gap-2 border-2 w-20 h-9 rounded-lg ml-5 mr-5">
-                <Eye  className="size-5 mt-1 ml-1"/>
-                <span type="" className=" rounded-lg border-gray-500">View</span>
-                </div>
-             </div>
-            </div>
-
-            <div className="grid grid-flow-col gap-72 m-5">
-                <div className="">
-                    <h2>Customers</h2>
-                </div>
-                <div className="">
-                    <h2>Product</h2>
-                </div>
-                <div className="">
-                    <h2>Actions</h2>
-                    <select name="" id="" className="w-96  p-2  bg-slate-200 rounded-lg">
-                        <option value="pending">Pending</option>
-                        <option value=""></option>
-                        <option value=""></option>
-                    </select>
-                </div>
-            </div>
-        </div>
-    })
-
-        {/* FIRST CONTAINER  */}
-
-
-  
-        
-        {/* third container */}
-            <div className="border-4 rounded-lg  m-6">
-            <div className="grid grid-flow-col gap-10 m-5">
-            <div className="">
-                <h3>ORD-001</h3>
-                <p>January 15, 2024</p>
-            </div>
-
-            <div className="flex flex-row gap-8 justify-end">
-                <span className="bg-amber-200 border-2 rounded-lg w-20 h-8">Pending</span>
-                <div className="flex flex-row gap-2 border-2 w-20 h-9 rounded-lg ml-5 mr-5">
-                <Eye  className="size-5 mt-1 ml-1"/>
-                <span type="" className=" rounded-lg border-gray-500">View</span>
-                </div>
-             </div>
-            </div>
-
-            <div className="grid grid-flow-col gap-72 m-5">
-                <div className="">
-                    <h2>Customers</h2>
-                </div>
-                <div className="">
-                    <h2>Product</h2>
-                </div>
-                <div className="">
-                    <h2>Actions</h2>
-                    <select name="" id="" className="w-96  p-2  bg-slate-200 rounded-lg">
-                        <option value="pending">Pending</option>
-                        <option value=""></option>
-                        <option value=""></option>
-                    </select>
-                </div>
-            </div>
-        </div>
-           {/* forth container */}
-               <div className="border-4 rounded-lg  m-6">
-            <div className="grid grid-flow-col gap-10 m-5">
-            <div className="">
-                <h3>ORD-001</h3>
-                <p>January 15, 2024</p>
-            </div>
-
-            <div className="flex flex-row gap-8 justify-end">
-                <span className="bg-amber-200 border-2 rounded-lg w-20 h-8">Pending</span>
-                <div className="flex flex-row gap-2 border-2 w-20 h-9 rounded-lg ml-5 mr-5">
-                <Eye  className="size-5 mt-1 ml-1"/>
-                <span type="" className=" rounded-lg border-gray-500">View</span>
-                </div>
-             </div>
-            </div>
-
-            <div className="grid grid-flow-col gap-72 m-5">
-                <div className="">
-                    <h2>Customers</h2>
-                </div>
-                <div className="">
-                    <h2>Product</h2>
-                </div>
-                <div className="">
-                    <h2>Actions</h2>
-                    <select name="" id="" className="w-96  p-2  bg-slate-200 rounded-lg">
-                        <option value="pending">Pending</option>
-                        <option value=""></option>
-                        <option value=""></option>
-                    </select>
-                </div>
-            </div>
-        </div>
-
-        
-        
-    
+  if (!products_loading && !users_loading) {
+    return (
+      <div className="overflow-auto flex flex-col bg-gray-50 gap-3 p-2 w-full h-full">
+        {products.map((product, index) => (
+          <OrdersCard
+            key={product.id}
+            product={product}
+            customer={users[index]}
+          />
+        ))}
+      </div>
+    );
+  }
 }
 
 export default Orders;
