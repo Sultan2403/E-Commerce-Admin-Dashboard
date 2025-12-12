@@ -30,9 +30,9 @@ function Nav() {
 
         <ul className="flex flex-col w-full">
           <NavLink
-            to={""}
+            to={"/"}
             className={({ isActive }) =>
-              isActive ? "text-blue-700 bg-slate-400" : null
+              isActive ? "text-white bg-blue-700" : null
             }
           >
             <li>
@@ -46,7 +46,7 @@ function Nav() {
           <NavLink
             to="/products"
             className={({ isActive }) =>
-              isActive ? "text-blue-700 bg-slate-400" : null
+              isActive ? "text-white bg-blue-700" : null
             }
           >
             <li>
@@ -60,7 +60,7 @@ function Nav() {
           <NavLink
             to="/orders"
             className={({ isActive }) =>
-              isActive ? "text-blue-700 bg-slate-400" : null
+              isActive ? "text-white bg-blue-700" : null
             }
           >
             <li>
@@ -73,9 +73,9 @@ function Nav() {
 
           <NavLink
             className={({ isActive }) =>
-              isActive ? "text-blue-700 bg-blue-300" : null
+              isActive ? "text-white bg-blue-700" : null
             }
-            to={"customers"}
+            to={"/customers"}
           >
             <li>
               <button className="flex gap-x-7 w-full py-2.5 px-5 hover:bg-slate-400 transition-all duration-300">
@@ -87,15 +87,15 @@ function Nav() {
 
           <NavLink
             className={({ isActive }) =>
-              isActive ? "text-blue-700 bg-slate-300" : null
+              isActive ? "text-white bg-blue-700" : null
             }
             to={"settings"}
           >
             <li>
-              <button className="flex gap-x-7 w-full py-2.5 px-5 hover:bg-slate-400 transition-all duration-300">
+              <div className="flex gap-x-7 w-full py-2.5 px-5 hover:bg-slate-400 transition-all duration-300">
                 <Settings size={24} />
                 <span>Settings</span>
-              </button>
+              </div>
             </li>
           </NavLink>
         </ul>

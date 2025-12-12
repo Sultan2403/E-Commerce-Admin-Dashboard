@@ -7,6 +7,11 @@ function Orders() {
   const { products, products_error, products_loading, awaitProducts } =
     useProducts();
 
+  function retry_to_get_orders() {
+    awaitProducts();
+    awaitUsers();
+  }
+
   if (products_loading || users_loading)
     return (
       <p className="m-auto self-center h-full flex items-center justify-center">
@@ -15,9 +20,15 @@ function Orders() {
     );
   if (products_error || users_error)
     return (
-      <p className="m-auto self-center h-full flex items-center justify-center text-red-500">
-        An error occoured
-      </p>
+      <div className="w-full mx-auto p-10 flex-col gap-2 bg-slate-300 h-screen flex items-center justify-center">
+        <p className="text-center text-red-600">Failed to load orders.</p>
+        <button
+          onClick={retry_to_get_orders}
+          className=" text-center rounded-[12px] p-2 bg-indigo-800 text-white"
+        >
+          Retry
+        </button>
+      </div>
     );
 
   if (!products_loading && !users_loading) {
