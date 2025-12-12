@@ -1,6 +1,6 @@
 // Import necessary libraries and components
 
-import useProducts from "../../../../../Hooks/useProducts";
+import useProducts from "../../../../Hooks/useProducts";
 import ProductsCard from "./productCard";
 import LoadingMsg from "./loading";
 
