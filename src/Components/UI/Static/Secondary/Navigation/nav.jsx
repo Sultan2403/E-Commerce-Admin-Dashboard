@@ -75,7 +75,7 @@ function Nav() {
             className={({ isActive }) =>
               isActive ? "text-blue-700 bg-blue-300" : null
             }
-            to={"customers"}
+            to={null}
           >
             <li>
               <button className="flex gap-x-7 w-full py-2.5 px-5 hover:bg-slate-400 transition-all duration-300">
