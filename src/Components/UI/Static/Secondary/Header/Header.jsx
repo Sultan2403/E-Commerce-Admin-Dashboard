@@ -1,7 +1,8 @@
 import { Search, Bell } from "lucide-react";
-import React from "react";
+import React, { useContext } from "react";
+import { Link } from "react-router-dom";
 import MiniHeader from "./miniHeader";
-
+import { AppContext } from "../../../Context/AppContext";
 export default function Header() {
   return (
     <>
@@ -25,7 +26,7 @@ export default function Header() {
           </div>
         </div>
 
-        {/* Right: Notifications + Profile */}
+        {/* Right: Notifications + Profile / Auth */}
         <div className="flex items-center gap-6">
           {/* Notification Icon */}
           <button className="relative">
@@ -35,17 +36,43 @@ export default function Header() {
             <span className="absolute top-0 right-0 block h-2 w-2 bg-red-500 rounded-full text-white"></span>
           </button>
 
-          {/* User profile */}
-          <div className="h-9 w-9 rounded-full bg-gray-300 overflow-hidden cursor-pointer">
-            <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqRCZsnZKow2okDtkevYDoQSozvsgvKtx1TQ&s"
-              alt="User"
-              className="h-full w-full object-cover"
-            />
-          </div>
+          {/* Auth buttons / profile */}
+          <AuthActions />
         </div>
       </header>
       <MiniHeader />
     </>
+  );
+}
+
+function AuthActions() {
+  const { isLogin, handleLogout, user } = useContext(AppContext);
+
+  if (isLogin) {
+    return (
+      <div className="flex items-center gap-3">
+        <div className="text-sm text-gray-700">{user?.fname || user?.email}</div>
+        <button
+          onClick={handleLogout}
+          className="px-3 py-1 bg-red-600 text-white rounded"
+        >
+          Logout
+        </button>
+      </div>
+    );
+  }
+
+  return (
+    <div className="flex items-center gap-3">
+      <Link to="/login" className="text-sm text-gray-700 hover:underline">
+        Login
+      </Link>
+      <Link
+        to="/register"
+        className="px-3 py-1 bg-blue-600 text-white rounded text-sm"
+      >
+        Register
+      </Link>
+    </div>
   );
 }

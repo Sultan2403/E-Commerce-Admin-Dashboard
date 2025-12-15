@@ -1,6 +1,6 @@
 import capitalize from "../../../../../Utilities/Typography/capitalizeFirstLetter";
 import ItemStatus from "./stockIndicator";
-import { LucideEdit2, Trash2 } from "lucide-react";
+import { Edit2, Trash2 } from "lucide-react";
 import randomizeArr from "../../../../../Utilities/Arrays/arrayRandomizer";
 
 export default function ProductsCard({ item }) {
@@ -48,7 +48,7 @@ export default function ProductsCard({ item }) {
 
       <div className="flex justify-between w-[100%] gap-2 items-center my-3">
         <button className="flex items-center gap-1 justify-center border-[1.5px] border-stone-500 rounded-lg py-1 px-2 flex-1 text-black font-semibold">
-          {<LucideEdit2 size={16} />} Edit
+          {<Edit2 size={16} />} Edit
         </button>
         <button className="flex items-center gap-1 justify-center border-[1.5px] border-stone-500 rounded-lg py-1 px-2 flex-1 text-red-700 font-semibold">
           {<Trash2 size={16} />} Delete

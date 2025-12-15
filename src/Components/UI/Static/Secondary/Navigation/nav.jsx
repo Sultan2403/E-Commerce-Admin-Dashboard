@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 
 import {
   House,
@@ -8,21 +8,15 @@ import {
   Settings,
   Menu,
 } from "lucide-react";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
+import { AppContext } from "../../../Context/AppContext";
 
 function Nav() {
   const [open, setOpen] = useState(false);
+  const { isLogin, user, handleLogout } = useContext(AppContext);
   return (
     <>
-      {/* 🔥 Mobile Toggle Button (place this ABOVE the <aside>)
-      <button 
-        onClick={() => setOpen(!open)} 
-        className="md:hidden p-4 fixed top-4 left-4 z-50 bg-white shadow rounded"
-      >
-        <Menu size={28}/>
-      </button> */}
-
-      {/* {side bar} */}
+ 
       <aside className=" h-screen w-full bg-stone-200 font-semibold flex flex-col">
         <div className="p-5">
           <h2 className="font-bold text-3xl mb-8">Admin panel</h2>
@@ -99,6 +93,29 @@ function Nav() {
             </li>
           </NavLink>
         </ul>
+        <div className="mt-auto p-4 border-t">
+          {isLogin ? (
+            <div className="flex flex-col gap-2">
+              <div className="text-sm text-gray-700">Signed in as</div>
+              <div className="font-semibold">{user?.fname || user?.email}</div>
+              <button
+                onClick={handleLogout}
+                className="mt-2 px-3 py-1 bg-red-600 text-white rounded"
+              >
+                Logout
+              </button>
+            </div>
+          ) : (
+            <div className="flex gap-2">
+              <Link to="/login" className="text-sm text-gray-700 hover:underline">
+                Login
+              </Link>
+              <Link to="/register" className="px-3 py-1 bg-blue-600 text-white rounded text-sm">
+                Register
+              </Link>
+            </div>
+          )}
+        </div>
       </aside>
     </>
   );
