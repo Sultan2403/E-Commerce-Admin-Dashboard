@@ -8,7 +8,7 @@ import ComingSoon from "./Components/UI/Static/Main/coming_soon";
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/E-Commerce-Admin-Dashboard/">
       <Routes>
         <Route path="/" element={<AdminLayout />}>
           <Route index element={<Dashboard />}></Route>
