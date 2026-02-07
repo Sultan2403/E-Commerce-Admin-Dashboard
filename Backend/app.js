@@ -12,20 +12,17 @@ app.use(
 );
 app.use(express.json());
 
-
-
 app.get("/", (req, res) => {
-  res
-    .status(200)
-    .json({ message: " Looking for something? Well it's not here XD" });
+  res.status(200).json({
+    success: true,
+    message: " Looking for something? Well it's not here XD",
+  });
 });
 
 app.get("/health", (req, res) => {
-  res.status(200).json({ message: "Server says heyyy :)" });
+  res.status(200).json({ success: true, message: "Server says heyyy :)" });
 });
 
-
-
-app.use(errors()); 
+app.use(errors());
 
 module.exports = app;
